@@ -1,7 +1,8 @@
 p {
-  background-color: red;
+  background-color: chartreuse;
   box-sizing: border-box;
   max-width: 150px;
   border-radius: 5%;
+  width: auto;
   text-align: center;
 }
