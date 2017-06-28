@@ -1,6 +1,7 @@
 p {
-  background-color: red;
+  background-color: mistyrose;
   box-sizing: border-box;
+  border: 1px solid red;
   max-width: 150px;
   border-radius: 5%;
   text-align: center;

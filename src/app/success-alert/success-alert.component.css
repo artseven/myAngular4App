@@ -1,5 +1,6 @@
 p {
   background-color: chartreuse;
+  border: 1px solid green;
   box-sizing: border-box;
   max-width: 150px;
   border-radius: 5%;
