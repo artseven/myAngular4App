@@ -19,6 +19,8 @@ export class ServersComponent implements OnInit {
   // allowNewUsername:boolean = false;
   serverCreated:boolean = false;
   servers = ['Testserver', 'Testserver 2'];
+  secretPassword: string = '';
+  allowedPassword: boolean = false;
 
   constructor() {
     setTimeout( () => {
@@ -42,5 +44,10 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
     console.log(event);
+  }
+
+  displayDetails() {
+    this.secretPassword = "Cooper and Charlie"
+    this.allowedPassword = !this.allowedPassword;
   }
 }
