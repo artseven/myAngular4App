@@ -18,6 +18,8 @@ export class ServersComponent implements OnInit {
   usernameCreationStatus:string = "No username assigned!";
   // allowNewUsername:boolean = false;
   serverCreated:boolean = false;
+  servers = ['Testserver', 'Testserver 2'];
+
   constructor() {
     setTimeout( () => {
       this.allowNewServer = true;
@@ -33,6 +35,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! Name is '+ this.serverName;
   }
 
