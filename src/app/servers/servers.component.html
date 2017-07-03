@@ -17,9 +17,10 @@
 <!-- Assignment -->
 <button class='btn btn-primary' (click)="displayDetails()">Display Details</button>
 <p *ngIf = 'allowedPassword'>{{ secretPassword }}</p>
-<div [ngStyle]="{backgroundColor: oneClick >= 5 ? 'blue' : 'transparent'}"
-     [ngClass]="{'white-text': oneClick >= 5}"
-     *ngFor="let oneClick of clicks"
+<div
+  *ngFor="let oneClick of clicks; let i = index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 4 }"
      >
   {{ oneClick }}
 </div>

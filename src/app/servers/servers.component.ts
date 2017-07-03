@@ -16,13 +16,13 @@ export class ServersComponent implements OnInit {
   serverName:string = 'Testserver';
   // username:string = '';
   usernameCreationStatus:string = "No username assigned!";
-  // allowNewUsername:boolean = false;
+  allowNewUsername:boolean = false;
   serverCreated:boolean = false;
-  // servers = ['Testserver', 'Testserver 2'];
+  servers = ['Testserver', 'Testserver 2'];
   secretPassword: string = '';
   allowedPassword: boolean = false;
   clicks = [];
-  click: number = 0;
+  // click: number = 0;
   clickRegistered: string = '';
   backgroundColor: string = '';
 
@@ -49,9 +49,9 @@ export class ServersComponent implements OnInit {
   displayDetails() {
     this.secretPassword = "Cooper and Charlie"
     this.allowedPassword = !this.allowedPassword;
-    this.click += 1;
-    this.clicks.push(this.click);
-    this.clickRegistered = "Click was registered! Number:"+ this.click;
+    // this.click += 1;
+    this.clicks.push(new Date());
+    // this.clickRegistered = "Click was registered! Number:"+ this.click;
     console.log(this.clicks);
   }
 
