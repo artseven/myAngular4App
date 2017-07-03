@@ -13,8 +13,8 @@
 </ng-template> -->
 
 <app-server *ngFor="let server of servers"></app-server>
-<button class='btn btn-primary' [disabled] = 'allowedPassword' (click)="displayDetails()">Display Details</button>
-<p>{{ secretPassword }}</p>
+<button class='btn btn-primary' (click)="displayDetails()">Display Details</button>
+<p *ngIf = 'allowedPassword'>{{ secretPassword }}</p>
 <!-- <label >Username</label>
 <input type="text" class="form-control" [(ngModel)]="username">
 <p>{{ username }}</p>

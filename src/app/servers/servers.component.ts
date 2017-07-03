@@ -21,6 +21,7 @@ export class ServersComponent implements OnInit {
   servers = ['Testserver', 'Testserver 2'];
   secretPassword: string = '';
   allowedPassword: boolean = false;
+  clicked:number = 0;
 
   constructor() {
     setTimeout( () => {
@@ -49,5 +50,6 @@ export class ServersComponent implements OnInit {
   displayDetails() {
     this.secretPassword = "Cooper and Charlie"
     this.allowedPassword = !this.allowedPassword;
+    this.clicked += 1;
   }
 }
